@@ -53,6 +53,11 @@
 ```
 keytool -list -v -keystore my-release-key.keystore
 ```
+
+<img width="962" alt="Screenshot 2024-09-25 at 6 54 10 AM" src="https://github.com/user-attachments/assets/5f06ed24-c8bb-4884-b232-6739476969de">
+
+
+
 ### SHA-256 in assetlinks.json
  ***https://www.example.com/.well-known/assetlinks.json***
 ```
