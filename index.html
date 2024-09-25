@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="any" href="apple-touch-icon.png">
+    <link rel="icon" sizes="any" href="favicon-32.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" sizes="192x192" href="icon192.png">
 
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="favicon.ico">
-
-
-        <link rel="apple-touch-icon" sizes="any" href="apple-touch-icon.png">
-        <link rel="icon" sizes="any" href="favicon-32.png" >
-
-        <link rel="manifest" href="manifest.json">
-        <link rel="icon" sizes="192x192" href="icon192.png">
-            
-                    
-    <title>manifest-json</title>
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>Manifest JSON</title>
     <style>
         body {
             display: flex;
@@ -27,8 +28,17 @@
             flex: 1;
             display: flex;
         }
+        pre {
+            background-color: #1f2937; 
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.375rem; 
+            overflow-x: auto;
+        }
     </style>
 </head>
+
+    
 <body class="bg-gray-300">
 
     <div id="main-content" class="flex justify-between items-start p-5 bg-gray-200 shadow-md rounded">
@@ -41,27 +51,21 @@
                     <img src="https://api.iconify.design/akar-icons:twitter-fill.svg" alt="Twitter" class="w-8 h-8 mr-2">
                 </a>
                 <a href="http://manifest.jessejesse.xyz" target="_blank" rel="noopener noreferrer" class="flex items-center text-blue-600 hover:underline">
-                    <img src="https://api.iconify.design/bi-filetype-json.svg"
-                    alt="json" class="w-8 h-8 mr-2">
+                    <img src="https://api.iconify.design/bi-filetype-json.svg" alt="JSON" class="w-8 h-8 mr-2">
                 </a>
             </div>
 
             <h1 class="text-2xl font-bold mb-4">manifest.json</h1>
 
-            <input type="text" id="short-name" placeholder="short name" class="border p-2 mb-2 w-full">
-            <input type="text" id="name" placeholder="appplication name" class="border p-2 mb-2 w-full">
-            <input type="text" id="start-url" placeholder="start url" class="border p-2 mb-2 w-full">
-            <input type="text" id="icon1" placeholder="icon x192" class="border p-2 mb-2 w-full">
-            <input type="text" id="icon2" placeholder="icon x512" class="border p-2 mb-2 w-full">
-            <input type="text" id="theme-color" placeholder="color" class="border p-2 mb-2 w-full">
-            <input type="text" id="background-color" placeholder="background" class="border p-2 mb-2 w-full">
+            <input type="text" id="short-name" placeholder="Short Name" class="border p-2 mb-2 w-full">
+            <input type="text" id="name" placeholder="Application Name" class="border p-2 mb-2 w-full">
+            <input type="text" id="start-url" placeholder="Start URL" class="border p-2 mb-2 w-full">
+            <input type="text" id="icon1" placeholder="Icon 192x192" class="border p-2 mb-2 w-full">
+            <input type="text" id="icon2" placeholder="Icon 512x512" class="border p-2 mb-2 w-full">
+            <input type="text" id="theme-color" placeholder="Theme Color" class="border p-2 mb-2 w-full">
+            <input type="text" id="background-color" placeholder="Background Color" class="border p-2 mb-2 w-full">
 
-            <button id="upload-btn" class="bg-blue-900 text-white py-2 rounded hover:bg-rose-900 mt-4">
-                Upload
-            </button>
-            <div id="upload-status" class="mt-4 text-red-800"></div>
-
-            <button id="download-btn" class="bg-green-800 text-white py-2 rounded hover:bg-green-800 mt-4">
+            <button id="download-btn" type="button" class="bg-green-800 text-white py-2 rounded hover:bg-green-800 mt-4">
                 Download
             </button>
 
@@ -71,18 +75,18 @@
                 </code>
             </div>
         </div>
+
         <div class="w-1/2 p-5 bg-gray-900 text-white rounded overflow-auto">
             <h2 class="text-xl text-green-400 mb-2">:json@localhost:</h2>
             <pre id="terminal-output"></pre>
         </div>
     </div>
+
     <footer class="bg-gray-900 text-gray-100 text-center p-4">
         @iLostmyipad
     </footer>
-   <script>
-        const apiUrl = 'https://server.jessejesse.workers.dev';
-        const apiKey = 'ce2AoaisOsdq6D0xRnRMLfS5VKuQYXuD-x_xXga1';
 
+    <script>
         const updateTerminalOutput = () => {
             const shortName = document.getElementById('short-name').value;
             const name = document.getElementById('name').value;
@@ -115,57 +119,12 @@
             };
 
             document.getElementById('terminal-output').textContent = JSON.stringify(manifestData, null, 2);
+         
+            document.getElementById('uploaded-url').textContent = `{"short_name": "${shortName}", "name": "${name}", "start_url": "${startUrl}", "icons": [{"src": "${icon1}", "type": "image/png", "sizes": "192x192", "purpose": "any maskable"}, {"src": "${icon2}", "type": "image/png", "sizes": "512x512", "purpose": "any maskable"}], "theme_color": "${themeColor}", "background_color": "${backgroundColor}"}`;
         };
 
         document.querySelectorAll('input, textarea').forEach(input => {
             input.addEventListener('input', updateTerminalOutput);
-        });
-
-        document.getElementById('upload-btn').addEventListener('click', async () => {
-            const uniqueID = Date.now();
-            const manifestFileName = `manifest-${uniqueID}.json`;
-
-            const data = {
-                short_name: document.getElementById('short-name').value,
-                name: document.getElementById('name').value,
-                start_url: document.getElementById('start-url').value,
-                icons: [
-                    {
-                        src: document.getElementById('icon1').value,
-                        type: "image/png",
-                        sizes: "192x192",
-                        purpose: "any maskable"
-                    },
-                    {
-                        src: document.getElementById('icon2').value,
-                        type: "image/png",
-                        sizes: "512x512",
-                        purpose: "any maskable"
-                    }
-                ],
-                theme_color: document.getElementById('theme-color').value,
-                background_color: document.getElementById('background-color').value
-            };
-
-            try {
-                const response = await fetch(`${apiUrl}/upload`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${apiKey}`
-                    },
-                    body: JSON.stringify({ manifest: data, name: manifestFileName })
-                });
-
-                if (response.ok) {
-                    document.getElementById('upload-status').textContent = 'Uploaded Successfully!';
-                    document.getElementById('uploaded-url').textContent = `${apiUrl}/manifests/${manifestFileName}`;
-                } else {
-                    throw new Error('Upload failed!');
-                }
-            } catch (error) {
-                document.getElementById('upload-status').textContent = error.message;
-            }
         });
 
         document.getElementById('download-btn').addEventListener('click', () => {
@@ -182,8 +141,10 @@
 
         updateTerminalOutput();
     </script>
-</body>
+      <script src="https://cdn.tailwindcss.com"></script>
+   </body>
 </html>
+
 
 
 
