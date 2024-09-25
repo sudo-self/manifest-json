@@ -1,7 +1,8 @@
 
 ### <a href="https://sudo-self.github.io/manifest-json/">manifest.json</a>&nbsp;generator
 
-<img width="1440" alt="Screenshot 2024-09-25 at 8 01 15 AM" src="https://github.com/user-attachments/assets/abf37e26-83ec-4e9f-ad8b-c6a2774ff11f">
+<img width="1433" alt="Screenshot 2024-09-25 at 9 26 24 AM" src="https://github.com/user-attachments/assets/82fd78d4-20ea-401f-ba1f-d516322dc9c8">
+
 
 ```
 bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifest.json
