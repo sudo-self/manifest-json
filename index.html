@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -38,9 +37,7 @@
     </style>
 </head>
 
-    
 <body class="bg-gray-300">
-
     <div id="main-content" class="flex justify-between items-start p-5 bg-gray-200 shadow-md rounded">
         <div class="flex flex-col w-1/2 p-5">
             <div class="flex items-center mb-4">
@@ -119,11 +116,12 @@
             };
 
             document.getElementById('terminal-output').textContent = JSON.stringify(manifestData, null, 2);
-         
-            document.getElementById('uploaded-url').textContent = `{"short_name": "${shortName}", "name": "${name}", "start_url": "${startUrl}", "icons": [{"src": "${icon1}", "type": "image/png", "sizes": "192x192", "purpose": "any maskable"}, {"src": "${icon2}", "type": "image/png", "sizes": "512x512", "purpose": "any maskable"}], "theme_color": "${themeColor}", "background_color": "${backgroundColor}"}`;
+            
+            const command = `bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifrest.json`;
+            document.getElementById('bubblewrap-command').textContent = command; 
         };
 
-        document.querySelectorAll('input, textarea').forEach(input => {
+        document.querySelectorAll('input').forEach(input => {
             input.addEventListener('input', updateTerminalOutput);
         });
 
@@ -141,9 +139,10 @@
 
         updateTerminalOutput();
     </script>
-      <script src="https://cdn.tailwindcss.com"></script>
-   </body>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
 </html>
+
 
 
 
