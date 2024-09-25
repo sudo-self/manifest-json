@@ -54,6 +54,7 @@
 keytool -list -v -keystore my-release-key.keystore
 ```
 ## SHA-256 in assetlinks.json
+ ***https://www.example.com/.well-known/assetlinks.json***
 ```
 
 [{
