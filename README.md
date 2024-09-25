@@ -40,7 +40,7 @@ keytool -list -v -keystore my-release-key.keystore
 
 <img width="962" alt="Screenshot 2024-09-25 at 6 54 10 AM" src="https://github.com/user-attachments/assets/54b441e0-6a83-4224-8c8f-74f8c8ffb2ae">
 
-### Google has tools to create one
+### Googles Asset Links Tool
 ### <a href="https://developers.google.com/digital-asset-links/tools/generator">Google Asset Links Generator</a>
 
 <img width="1440" alt="Screenshot 2024-09-25 at 7 51 04 AM" src="https://github.com/user-attachments/assets/6e55ef93-2714-48ed-90e3-fbb9f858c4dc">
