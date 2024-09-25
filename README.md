@@ -1,5 +1,5 @@
 
-## build apk
+### PWA
 
 ```bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifest.json```
 
@@ -32,24 +32,39 @@
 }
 
 ```
-## Assetlinks.json
-***http://example.digitalassetlinks.org/.well-known/assetlinks.json***
+### deep link
 
 ```
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "web",
-    "site": "https://www.google.com"
-  }
-},{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "org.digitalassetlinks.sampleapp",
-    "sha256_cert_fingerprints": ["10:39:38:EE:45:37:E5:9E:8E:E7:92:F6:54:50:4F:B8:34:6F:C6:B3:46:D0:BB:C4:41:5F:C3:39:FC:FC:8E:C1"]
-  }
-}]
+<activity
+    android:name=".MyMapActivity"
+    android:exported="true"
+    ...>
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="geo" />
+    </intent-filter>
+</activity>
+
+```
+### Generate fingerprint 
+
+```
+keytool -list -v -keystore my-release-key.keystore
+```
+
+## Web Links
+
+```
+<intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+
+    <data android:scheme="http" />
+    <data android:host="myownpersonaldomain.com" />
+</intent-filter>
 
 ```
 
