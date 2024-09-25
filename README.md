@@ -1,5 +1,5 @@
 
-### <a href="https://sudo-self.github.io/manifest-json/">manifest.json</a>&nbsp;generator
+### <a href="https://make-manifest-json.vercel.app">manifest.json</a>&nbsp;generator
 
 <img width="1440" alt="Screenshot 2024-09-25 at 9 50 41 AM" src="https://github.com/user-attachments/assets/f628421f-3c2d-499a-848d-e59f5940b9bc">
 
