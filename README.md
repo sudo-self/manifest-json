@@ -1,7 +1,8 @@
 
 ### <a href="https://sudo-self.github.io/manifest-json/">manifest.json</a>&nbsp;generator
 
-<img width="1433" alt="Screenshot 2024-09-25 at 9 26 24 AM" src="https://github.com/user-attachments/assets/82fd78d4-20ea-401f-ba1f-d516322dc9c8">
+<img width="1440" alt="Screenshot 2024-09-25 at 9 50 41 AM" src="https://github.com/user-attachments/assets/f628421f-3c2d-499a-848d-e59f5940b9bc">
+
 
 ### PWA wrap
 
