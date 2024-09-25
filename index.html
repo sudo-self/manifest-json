@@ -69,13 +69,21 @@
             </button>
 
             <div class="mt-4">
+                <h2>build apk</h2>
                 <code id="bubblewrap-command" class="bg-gray-300 p-2 rounded">
                     bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifest.json
-                </code><br>
-                <p>extract SHA256</p>
-               <code class="bg-gray-300 p-2 rounded">keytool -list -v -keystore android.keystore</code>
-
+                </code>
             </div>
+             <div class="mt-4">
+                <h2>Extract SHA256</h2>
+               <code class="bg-gray-300 p-2 rounded">keytool -list -v -keystore android.keystore</code>
+               <code class="bg-gray-300 p-2 rounded">[{<br>
+  "relation": ["delegate_permission/common.handle_all_urls"],<br>
+  "target" : { "namespace": "android_app", "package_name": "com.example.app",<br>
+               "sha256_cert_fingerprints": ["hash_of_app_certificate"] }<br>
+}]</code> 
+             </div>
+             </div>
         </div>
 
         <div class="w-1/2 p-5 bg-gray-900 text-white rounded overflow-auto">
