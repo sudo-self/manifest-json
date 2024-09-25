@@ -1,7 +1,5 @@
 
-# <a href="https://sudo-self.github.io/manifest-json/">Manifest.json</a>&nbsp;Generator for building Android Apps or wrapping a PWA 
-
-### PWA
+### <a href="https://sudo-self.github.io/manifest-json/">Manifest.json</a>&nbsp;Generator for building Android Apps or wrapping a PWA 
 
 ```bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifest.json```
 
