@@ -1,28 +1,25 @@
 
 
 ```
-
 {
-  "short_name": "",
-  "name": "",
-  "start_url": "",
+  "short_name": "JSON",
+  "name": "manifest.json",
+  "start_url": "https://sudo-self.github.io/manifest-json",
   "icons": [
     {
-      "src": "",
+      "src": "icon192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "",
+      "src": "icon512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
     }
   ],
-  "theme_color": "",
-  "background_color": ""
+  "theme_color": "#f0f0f0",
+  "background_color": "#f0f0f0"
 }
-
-
 ```
