@@ -43,11 +43,6 @@ keytool -list -v -keystore my-release-key.keystore
 ### Googles Asset Links Tool
 ### <a href="https://developers.google.com/digital-asset-links/tools/generator">Google Asset Links Generator</a>
 
-<img width="1440" alt="Screenshot 2024-09-25 at 7 51 04 AM" src="https://github.com/user-attachments/assets/6e55ef93-2714-48ed-90e3-fbb9f858c4dc">
-
-
-```
-
 <img width="948" alt="Screenshot 2024-09-25 at 7 01 51 AM" src="https://github.com/user-attachments/assets/e83fe2ec-fe4c-4a0a-9d51-5a736f11c654">
 
 ### Note the `.` wellknown/
