@@ -71,22 +71,18 @@
                 </code>
             </div>
         </div>
-
         <div class="w-1/2 p-5 bg-gray-900 text-white rounded overflow-auto">
             <h2 class="text-xl text-green-400 mb-2">:json@localhost:</h2>
             <pre id="terminal-output"></pre>
         </div>
     </div>
-
     <footer class="bg-gray-900 text-gray-100 text-center p-4">
         @iLostmyipad
     </footer>
-
-    <script>
+   <script>
         const apiUrl = 'https://server.jessejesse.workers.dev';
         const apiKey = 'ce2AoaisOsdq6D0xRnRMLfS5VKuQYXuD-x_xXga1';
 
-        
         const updateTerminalOutput = () => {
             const shortName = document.getElementById('short-name').value;
             const name = document.getElementById('name').value;
@@ -118,16 +114,13 @@
                 background_color: backgroundColor
             };
 
-           
             document.getElementById('terminal-output').textContent = JSON.stringify(manifestData, null, 2);
         };
 
-      
         document.querySelectorAll('input, textarea').forEach(input => {
             input.addEventListener('input', updateTerminalOutput);
         });
 
-      
         document.getElementById('upload-btn').addEventListener('click', async () => {
             const uniqueID = Date.now();
             const manifestFileName = `manifest-${uniqueID}.json`;
@@ -151,57 +144,43 @@
                     }
                 ],
                 theme_color: document.getElementById('theme-color').value,
-                background_color: document.getElementById('background-color').value,
+                background_color: document.getElementById('background-color').value
             };
 
             try {
                 const response = await fetch(`${apiUrl}/upload`, {
-                    method: 'PUT',
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': apiKey
+                        'Authorization': `Bearer ${apiKey}`
                     },
-                    body: JSON.stringify(data),
+                    body: JSON.stringify({ manifest: data, name: manifestFileName })
                 });
 
-                const uploadStatus = document.getElementById('upload-status');
-                const terminalOutput = document.getElementById('terminal-output');
-
                 if (response.ok) {
-                    uploadStatus.textContent = 'Upload successful!';
-                    const jsonResponse = await response.json();
-
-               
-                    const uploadedUrl = `${apiUrl}/manifest${uniqueID}.json`;
-                    terminalOutput.textContent = JSON.stringify(jsonResponse, null, 2);
-                    document.getElementById('uploaded-url').textContent = uploadedUrl;
+                    document.getElementById('upload-status').textContent = 'Uploaded Successfully!';
+                    document.getElementById('uploaded-url').textContent = `${apiUrl}/manifests/${manifestFileName}`;
                 } else {
-                    const errorMessage = await response.text();
-                    throw new Error(errorMessage || 'Upload failed!');
+                    throw new Error('Upload failed!');
                 }
             } catch (error) {
-                document.getElementById('upload-status').textContent = `Error: ${error.message}`;
-                document.getElementById('terminal-output').textContent = `Error: ${error.message}`;
+                document.getElementById('upload-status').textContent = error.message;
             }
         });
 
         document.getElementById('download-btn').addEventListener('click', () => {
-            const uniqueID = Date.now();
-            const blob = new Blob([document.getElementById('terminal-output').textContent], { type: 'application/json' });
+            const dataStr = document.getElementById('terminal-output').textContent;
+            const blob = new Blob([dataStr], { type: "application/json" });
             const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = `manifest-${uniqueID}.json`;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'manifest.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         });
 
         updateTerminalOutput();
-    </script>
-
-
     </script>
 </body>
 </html>
