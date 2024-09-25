@@ -25,13 +25,29 @@
             display: flex;
             height: 100vh;
         }
+        .phone {
+            position: relative;
+            width: 300px; 
+            height: 600px; 
+            border: 16px solid #000;
+            border-radius: 36px;
+            background-color: #ffffff; 
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         pre {
-            background-color: #1f2937;
+            background-color: rgba(31, 41, 55, 0.8); 
             color: #e5e7eb;
             padding: 1rem;
             border-radius: 0.375rem;
             overflow-x: auto;
             height: 100%;
+            width: 100%;
+            margin: 0; 
         }
     </style>
 </head>
@@ -50,7 +66,7 @@
                 </a>
             </div>
 
-            <h1 class="text-2xl font-bold mb-4">Manifest Generator</h1>
+            <h1 class="text-2xl font-bold mb-4">manifest.json</h1>
             <a href="https://github.com/sudo-self/manifest-json/actions/workflows/static.yml">
                 <img src="https://github.com/sudo-self/manifest-json/actions/workflows/static.yml/badge.svg" alt="Deploy static content to Pages">
             </a>
@@ -78,8 +94,10 @@
         </div>
 
         <div class="w-full md:w-1/2 p-5 bg-gray-900 text-white rounded overflow-auto">
-            <h2 class="text-xl text-green-400 mb-2">manifest.json</h2>
-            <pre id="terminal-output"></pre>
+            <h2 class="text-xl text-green-400 mb-2">//manifest.json</h2>
+            <div class="phone">
+                <pre id="terminal-output"></pre>
+            </div>
         </div>
     </div>
 
