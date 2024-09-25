@@ -1,11 +1,14 @@
 
-### <a href="https://sudo-self.github.io/manifest-json/">Manifest.json</a>&nbsp;Generator for building Android Apps or wrapping a PWA 
+### <a href="https://sudo-self.github.io/manifest-json/">manifest.json</a>&nbsp;generator
 
-```bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifest.json```
-
-### manifest.json
+<img width="1440" alt="Screenshot 2024-09-25 at 8 01 15 AM" src="https://github.com/user-attachments/assets/abf37e26-83ec-4e9f-ad8b-c6a2774ff11f">
 
 ```
+bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifest.json
+```
+
+```
+
 {
   "short_name": "JSON",
   "name": "manifest.json",
