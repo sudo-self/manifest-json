@@ -70,7 +70,7 @@ keytool -list -v -keystore my-release-key.keystore
 ```
 ### assetlinks.json domain path
 
- <a href="https://sudo-self.github.io/.well-known/assetlinks.json">sudo-self.github.io/.well-known/assetlinks.json</a><br>
+ <a href="https://sudo-self.github.io/manifest-json/.well-known/assetlinks.json">sudo-self.github.io/manifest-json/.well-known/assetlinks.json</a><br>
  
  ### Note the `.` wellknown/
 
