@@ -56,19 +56,16 @@ keytool -list -v -keystore my-release-key.keystore
  
 ### Test: &nbsp;<a href="https://sudo-self.github.io/manifest-json/.well-known/assetlinks.json">sudo-self.github.io/manifest-json/.well-known/assetlinks.json</a><br>
 
+***Any response from the server besides HTTP 200 is treated as an error***
+
 <img width="1195" alt="Screenshot 2024-09-25 at 7 29 29 AM" src="https://github.com/user-attachments/assets/9e233867-a60f-4c0c-8fab-bca7347f68ab">
 
-## Web Links
+### match a target
 
 ```
-<intent-filter>
-    <action android:name="android.intent.action.VIEW" />
-    <category android:name="android.intent.category.DEFAULT" />
-    <category android:name="android.intent.category.BROWSABLE" />
-
-    <data android:scheme="http" />
-    <data android:host="myownpersonaldomain.com" />
-</intent-filter>
-
+"target": {
+  "namespace": "web",
+  "site": "https://sudo-self.github.io/"
+}
 ```
 
