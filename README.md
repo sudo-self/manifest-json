@@ -57,7 +57,7 @@ keytool -list -v -keystore my-release-key.keystore
 
 <img width="962" alt="Screenshot 2024-09-25 at 6 54 10 AM" src="https://github.com/user-attachments/assets/5f06ed24-c8bb-4884-b232-6739476969de">
 
-### SHA-256 in assetlinks.json extract key to fingerprint weblink
+### SHA-256 placed inside 'assetlinks.json' 
 
 <img width="948" alt="Screenshot 2024-09-25 at 7 01 51 AM" src="https://github.com/user-attachments/assets/e83fe2ec-fe4c-4a0a-9d51-5a736f11c654">
 
@@ -68,13 +68,15 @@ keytool -list -v -keystore my-release-key.keystore
                "sha256_cert_fingerprints": ["hash_of_app_certificate"] }
 }]
 ```
-### create the assetlinks json in the Domain Path
+### assetlinks.json domain path
 
  <a href="https://sudo-self.github.io/.well-known/assetlinks.json">sudo-self.github.io/.well-known/assetlinks.json</a><br>
  
  ### Note the `.` wellknown/
 
 <img width="703" alt="Screenshot 2024-09-25 at 7 10 12 AM" src="https://github.com/user-attachments/assets/6b3992f5-3ef0-4c95-867f-bc9c5dddb511">
+
+
  
 ## Web Links
 
