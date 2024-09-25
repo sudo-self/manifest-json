@@ -68,16 +68,15 @@ keytool -list -v -keystore my-release-key.keystore
                "sha256_cert_fingerprints": ["hash_of_app_certificate"] }
 }]
 ```
-### assetlinks.json domain path
+### domain path<br>
 
- <a href="https://sudo-self.github.io/manifest-json/.well-known/assetlinks.json">sudo-self.github.io/manifest-json/.well-known/assetlinks.json</a><br>
+### Note the `.` wellknown/
  
- ### Note the `.` wellknown/
+### <a href="https://sudo-self.github.io/manifest-json/.well-known/assetlinks.json">sudo-self.github.io/manifest-json/.well-known/assetlinks.json</a><br>
+ 
 
 <img width="703" alt="Screenshot 2024-09-25 at 7 10 12 AM" src="https://github.com/user-attachments/assets/6b3992f5-3ef0-4c95-867f-bc9c5dddb511">
 
-
- 
 ## Web Links
 
 ```
