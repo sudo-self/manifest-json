@@ -40,14 +40,12 @@ keytool -list -v -keystore my-release-key.keystore
 
 <img width="962" alt="Screenshot 2024-09-25 at 6 54 10 AM" src="https://github.com/user-attachments/assets/54b441e0-6a83-4224-8c8f-74f8c8ffb2ae">
 
-## example
+### Google has tools to create one
+### <a href="https://developers.google.com/digital-asset-links/tools/generator">Google Asset Links Generator</a>
 
-```
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "com.example.app",
-               "sha256_cert_fingerprints": ["hash_of_app_certificate"] }
-}]
+<img width="1440" alt="Screenshot 2024-09-25 at 7 51 04 AM" src="https://github.com/user-attachments/assets/6e55ef93-2714-48ed-90e3-fbb9f858c4dc">
+
+
 ```
 
 <img width="948" alt="Screenshot 2024-09-25 at 7 01 51 AM" src="https://github.com/user-attachments/assets/e83fe2ec-fe4c-4a0a-9d51-5a736f11c654">
