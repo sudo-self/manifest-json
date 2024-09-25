@@ -3,7 +3,7 @@
 
 ```bubblewrap init --manifest https://sudo-self.github.io/manifest-json/manifest.json```
 
-
+### manifest.json
 
 ```
 {
@@ -52,6 +52,15 @@
 
 ```
 keytool -list -v -keystore my-release-key.keystore
+```
+## SHA-256 in assetlinks.json
+```
+
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "com.example.app",
+               "sha256_cert_fingerprints": ["hash_of_app_certificate"] }
+}]
 ```
 
 ## Web Links
