@@ -32,20 +32,24 @@
 }
 
 ```
-### deep link
+## Assetlinks.json
+***http://example.digitalassetlinks.org/.well-known/assetlinks.json***
 
 ```
-<activity
-    android:name=".MyMapActivity"
-    android:exported="true"
-    ...>
-    <intent-filter>
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="geo" />
-    </intent-filter>
-</activity>
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "web",
+    "site": "https://www.google.com"
+  }
+},{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "org.digitalassetlinks.sampleapp",
+    "sha256_cert_fingerprints": ["10:39:38:EE:45:37:E5:9E:8E:E7:92:F6:54:50:4F:B8:34:6F:C6:B3:46:D0:BB:C4:41:5F:C3:39:FC:FC:8E:C1"]
+  }
+}]
 
 ```
 
