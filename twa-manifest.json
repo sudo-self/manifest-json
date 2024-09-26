@@ -1,7 +1,7 @@
 {
   "packageId": "io.github.sudo_self.twa",
-  "host": "sudo-self.github.io/manifest-json/index.html",
-  "name": "manifest.json",
+  "host": "sudo-self.github.io/manifest-json/",
+  "name": "JSON",
   "launcherName": "JSON",
   "display": "standalone",
   "themeColor": "#F0F0F0",
@@ -12,14 +12,14 @@
   "navigationDividerColorDark": "#000000",
   "backgroundColor": "#F0F0F0",
   "enableNotifications": true,
-  "startUrl": "/manifest-json/index.html",
+  "startUrl": "/manifest-json",
   "iconUrl": "https://sudo-self.github.io/manifest-json/icon512.png",
   "maskableIconUrl": "https://sudo-self.github.io/manifest-json/icon512.png",
   "monochromeIconUrl": "https://sudo-self.github.io/manifest-json/icon512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
-    "path": "/Users/jessejesse/Desktop/untitled folder 15/android.keystore",
-    "alias": "manifest"
+    "path": "/Users/jessejesse/android.keystore",
+    "alias": "android"
   },
   "appVersionName": "1",
   "appVersionCode": 1,
