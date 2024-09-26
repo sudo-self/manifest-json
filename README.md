@@ -1,5 +1,6 @@
 
-### <a href="https://make-manifest-json.vercel.app">manifest.json</a>&nbsp;generator
+### web&nbsp;<a href="https://make-manifest-json.vercel.app">manifest.json</a>&nbsp;generator
+### Android&nbsp; <a href="https://github.com/sudo-self/manifest-json/archive/refs/tags/apk.zip">apk
 
 <img width="1440" alt="Screenshot 2024-09-25 at 9 50 41 AM" src="https://github.com/user-attachments/assets/f628421f-3c2d-499a-848d-e59f5940b9bc">
 
